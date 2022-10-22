@@ -1,0 +1,89 @@
+.container-comentario{
+
+  background-color:white;
+  margin-top:       10px;
+  width:            95%;
+  flex-direction:   column;
+  align-items:      flex-end;
+  justify-content:  space-around;
+  word-wrap:        break-word;
+  display:          flex;
+
+}
+
+.container-nt {
+  width:            100%;
+  padding-bottom:   7px;
+  height:           100%;
+  flex-direction:   row;
+  justify-content:  space-around;
+  word-wrap:        break-word;
+  display:          flex;
+}
+
+.username-comentario-container {
+
+  word-wrap: break-word;
+  padding-top: 8px;
+  width: 12%;
+
+}
+
+.username-comentario {
+  color:        rgb(0, 119, 255);
+  font-family:    BarlowSemiCondensedBold, arial;
+  word-wrap:      break-word;
+  letter-spacing: 1px;
+}
+
+.txt-comentario-container {
+
+  word-wrap: break-word;
+  padding-top: 8px;
+  width:80%;
+  
+}
+
+.txt-comentario {
+
+  font-family: BarlowSemiCondensed, arial;
+  word-wrap: break-word;
+
+}
+
+.btn-excluir-comment{
+  
+  font-family:      BarlowSemiCondensed, arial;
+  text-decoration:  underline;
+  cursor:           pointer;
+  padding:          15px;
+
+}
+
+.btn-excluir-comment:hover{
+  color: red;
+}
+
+@media (max-width: 600px){
+ 
+  .username-comentario {
+    font-size: 16px;
+  }
+  .txt-comentario {
+    font-size: 16px
+  }
+  
+}
+
+@media (max-width: 400px){
+ 
+  .username-comentario {
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+  .txt-comentario {
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+  
+}

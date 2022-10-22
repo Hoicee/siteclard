@@ -1,0 +1,156 @@
+.card 
+{
+  box-shadow:
+  0px 0px 0.2px rgba(0, 0, 0, 0.017),
+  0px 0px 0.4px rgba(0, 0, 0, 0.025),
+  0px 0px 0.6px rgba(0, 0, 0, 0.031),
+  0px 0px 1px rgba(0, 0, 0, 0.035),
+  0px 0px 1.4px rgba(0, 0, 0, 0.04),
+  0px 0px 1.9px rgba(0, 0, 0, 0.045),
+  0px 0px 2.8px rgba(0, 0, 0, 0.049);
+
+	background-color: white;
+	text-align: 	     center;
+	font-size: 		    16px;
+	font-family: 	    BarlowSemiCondensed, arial;
+ 	user-select:  	  none;
+	text-decoration:  none;
+	color:          black;
+	margin: 			    10px;
+	height: 			    340px;
+	position: 			  relative;
+	display: 			    flex;
+	align-items: 		  center;
+	flex-direction:   column;
+
+	cursor: pointer;
+
+	transition: box-shadow 350ms;
+
+}
+
+.prod-info-container {
+	width: 			    100%;
+	height: 		    100px;
+	word-wrap: 		  break-word;
+	display: 		    flex;
+	flex-direction: column;
+	align-items: 	  center;
+}
+
+.prod-info-container h2{
+	margin-top: 10px;
+	height: 	  60px;
+	width: 		  85%;
+
+	transition: all 200ms ease-in-out;
+
+
+}
+
+.prod-info-container p{
+	margin-top: 5px;
+	height: 	  60px;
+	font-size: 	20px;
+}
+
+.imagemLegal{
+	width: 		220px;
+	height: 	220px;
+}
+
+.btn-comprar-card{
+  font-family:  Montserrat, arial;
+  text-decoration: none;
+  font-size:    14px;
+  color:        black;
+	opacity: 			0;
+	transform:    translateY(15px);
+	bottom: 	    12px;
+	width: 		    90%;
+	height: 	    60px;
+	border:		    3px solid#5F9DF7;
+	position:		    absolute;
+	display: 		    flex;
+	align-items: 	  center;
+	justify-content:center;
+
+	transition: all 300ms ease-in-out;
+
+}
+
+.btn-comprar-card:hover > .flow-btn-comprar{
+
+  height: 100%;
+
+}
+
+.btn-comprar-card:hover {
+  
+  color: white;
+
+}
+
+.flow-btn-comprar {
+  background-color:#5F9DF7;
+  position: absolute;
+  z-index: -1;
+  bottom:   0;
+  left:     0;
+  right:    0;
+  height:   0%;
+
+  transition: height 300ms ease-in-out;
+}
+
+.card:hover > .btn-comprar-card {
+
+	transform:  translateY(0);
+	opacity: 1;
+	/* animation: btn-comprar-sobe 300ms ease-in-out forwards; */
+}
+
+.card:hover .prod-info-container h2 {
+  opacity: 0;
+}
+
+.card:hover .prod-info-container p {
+  opacity: 0;
+}
+
+.card:hover{
+	box-shadow:
+  0px 0px 0.2px rgba(0, 0, 0, 0.017),
+  0px 0px 0.4px rgba(0, 0, 0, 0.025),
+  0px 0px 0.6px rgba(0, 0, 0, 0.031),
+  0px 0px 1px rgba(0, 0, 0, 0.035),
+  0px 0px 1.4px rgba(0, 0, 0, 0.04),
+  0px 0px 1.9px rgba(0, 0, 0, 0.045),
+  0px 0px 2.8px rgba(0, 0, 0, 0.049),
+  0px 0px 4px rgba(0, 0, 0, 0.055),
+  0px 0px 6.2px rgba(0, 0, 0, 0.063),
+  0px 0px 11px rgba(0, 0, 0, 0.08);
+}
+
+.cardzao
+{
+	text-decoration: none;
+	color: 			black;
+}
+
+.cardzao:active{
+
+	color: black;
+
+}
+
+/* @keyframes btn-comprar-sobe {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+} */

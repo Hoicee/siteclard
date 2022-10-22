@@ -1,0 +1,185 @@
+.SignUpPage{
+
+	width: 				      100%;
+	min-height: 		    100vh;
+	background-color: 	white;
+	display: 			      flex;
+
+}
+
+.SignUp{
+
+	margin-top: 		  25vh;
+	display: 			    flex;
+	align-items: 		  center;
+	flex-direction: 	column;
+	background-color: white;
+	width: 				    100%;
+
+}
+
+.SignUp h1 {
+	font-family: Poppins, arial;
+}
+
+.cForm{
+	
+	display: 			  flex;
+	justify-content: center;
+	align-items: 		center;
+	flex-direction: column;
+	width: 				  100%;
+	max-width: 			400px;
+
+}
+
+.underlineh1 {
+  height:           5px;
+  width:            220px;
+  border-radius:    3px;
+  background-color: #5F9DF7;
+}
+
+.inputs_container {
+	display: 		    flex;
+	flex-direction: column;
+	width: 			    95%;
+	margin-top: 	  40px;
+	position: 		  relative;
+}
+
+.cinputs{
+
+	height: 			20px;
+	font-family: 	BarlowSemiCondensed, arial;
+	font-size: 		20px;
+	width: 				100%;
+	padding: 			20px;
+	border-radius:10px;
+	background-color: 	none;
+
+	border: 			2px solid rgb(143, 143, 143);
+}
+
+.h4_input {
+  font-family: 			BarlowSemiCondensed, arial;
+	background-color: white;
+	color: 				  rgb(109, 109, 109);
+	letter-spacing:  0.6px;
+	z-index: 	       1;
+	pointer-events: none;
+	left: 			    10px;
+	bottom: 		    34px;
+	font-size: 		  20px;
+	position: 		  absolute;
+	transform: 		  translate(10px, 23px);
+
+	transition: all 150ms;
+}
+
+.cinputs:focus ~ .h4_input{
+	display: 	inherit;
+	transform: 	translate(0px, 0px);
+	color:		#5F9DF7;
+	left: 		10px;
+	font-size: 	18px;
+}
+
+.cinputs:not([value=""]) ~ .h4_input{
+	display: 	  inherit;
+	transform: 	translate(0px, 0px);
+	left: 		  10px;
+	font-size: 	18px;
+}
+
+.cinputs:focus{
+	border-color: #5F9DF7;
+}
+
+.cinputs.valid {
+	border-color: rgb(107, 223, 107);
+}
+.cinputs.valid ~ .h4_input {
+	color: rgb(47, 175, 47);
+}
+
+.valid {
+	border-color: lightgreen;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.btnCads{
+
+  cursor:       pointer;
+  user-select:  none;
+  color:      white;
+
+  position:   relative;
+  margin-top: 30px;
+
+  height:           60px;
+  font-family:      Poppins, arial;
+  font-size:        2rem;
+  text-decoration:  none;
+  text-align:       center;
+  transition:       all .5s ease;
+  display:          block;
+  width:            95%;
+  padding:          0.5rem;
+  border-radius:    1.0rem;
+  background-color:#5F9DF7;
+  color:          #000;
+  transition:       all .5s ease 0s;
+
+}
+
+.btnCads span{
+  display:    inline-block;
+  color:    white;
+  position:   relative;
+  transition: all .5s ease;
+}
+
+.userPlusIcon{
+  color:      white;
+  position:     absolute;
+  top:          15px;
+  left:         6rem;
+  display:      inline-block;
+  opacity:      0;
+  transition:   all .2s ease 0s;
+}
+
+.btnCads:hover span{
+  padding-left: 3.5rem; 
+}
+
+.btnCads:hover .userPlusIcon{
+  left:     3.5rem;
+  opacity:  1;
+}
+
+
+
+.btnVoltar{
+
+	text-decoration: 	none;
+	font-family: 		BarlowSemiCondensed, arial;
+	font-size: 			18px;
+	position: 			relative;
+	top: 				    40px;
+	color:				rgb(0, 0, 0);
+
+}
+
+.btnVoltar:hover{
+
+	text-decoration: underline;
+
+}

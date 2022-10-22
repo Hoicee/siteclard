@@ -1,0 +1,41 @@
+.comprasCard{
+	width: 				90%;
+	display: 			flex;
+	margin-top: 		15px;
+	margin-left: 		5%;
+	background-color: 	white;
+	
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.2);
+}
+
+.comprasCard h2{
+	font-family: 	BarlowSemiCondensed, Arial, Helvetica, sans-serif;
+	color: 			black;
+	flex:	 		1;
+	margin: 		8px;
+
+}
+
+.lista-produtos{
+	position: 		relative;
+	flex: 			1;
+	text-align: 	left;
+	margin-right: 	0px;
+	margin-left: 	10px;
+	height: 		200px;
+	width: 			220px;	
+	overflow: 		auto;
+}
+
+.lista-sobre{
+	flex: 1;
+}
+
+@media (max-width: 440px) {
+	.comprasCard h2{
+
+		font-size: 20px;
+
+	}
+	
+}

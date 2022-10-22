@@ -1,0 +1,16 @@
+.lista-compras{
+
+	width: 				100%;
+	display: 			flex;
+	align-items: 		center;
+	justify-content: 	center;
+}
+
+.itens-compra{
+
+	width: 		650px;
+	height: 	650px;
+	margin-top: 120px;
+	overflow-y: auto;
+	
+}

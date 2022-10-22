@@ -1,0 +1,167 @@
+.loginPage{
+
+	width: 				      100%;
+	min-height: 		    100vh;
+	background-color: 	white;
+	display: 			      flex;
+
+}
+
+.login{
+
+	margin-top: 		  25vh;
+	display: 			    flex;
+	align-items: 		  center;
+	flex-direction: 	column;
+	background-color: white;
+	width: 				    100%;
+
+}
+
+.underlineh1l {
+	height:           5px;
+	width:            95px;
+	border-radius:    3px;
+	background-color:#5F9DF7;
+}
+
+.login h1 {
+	font-family: Poppins, arial;
+}
+
+.form{
+
+  display: 			    flex;
+	justify-content: center;
+	align-items: 		  center;
+	flex-direction:   column;
+	width: 				    100%;
+	max-width: 			  400px;
+
+}
+
+.input-container-l {
+	display: 		    flex;
+	flex-direction: column;
+	width: 			    95%;
+	margin-top: 	  40px;
+	position: 		  relative;
+}
+
+.h4-input-l {
+  font-family: 			BarlowSemiCondensed, arial;
+	background-color: white;
+	color: 				  rgb(109, 109, 109);
+	letter-spacing:  0.6px;
+	z-index: 	       1;
+	pointer-events: none;
+	left: 			    10px;
+	bottom: 		    34px;
+	font-size: 		  20px;
+	position: 		  absolute;
+	transform: 		  translate(10px, 23px);
+
+	transition: all 150ms;
+}
+
+.linputs{
+
+	height: 			      20px;
+	font-family: 	      BarlowSemiCondensed, arial;
+	font-size: 		      20px;
+	width: 				      100%;
+	padding: 			      20px;
+	border-radius:      10px;
+	background-color: 	none;
+
+	border: 			2px solid rgb(143, 143, 143);
+}
+
+input:focus {outline: none}
+
+.linputs:focus ~ .h4-input-l{
+	display: 	  inherit;
+	transform: 	translate(0px, 0px);
+	color:		#5F9DF7;
+	left: 		  10px;
+	font-size: 	18px;
+}
+
+.linputs:not([value=""]) ~ .h4-input-l{
+	display: 	  inherit;
+	transform: 	translate(0px, 0px);
+	left: 		  10px;
+	font-size: 	18px;
+}
+
+.linputs:focus{
+	border-color: #5F9DF7;
+}
+
+.btnLogin{
+
+  cursor:       pointer;
+  user-select:  none;
+  color:      white;
+
+  position:   relative;
+  margin-top: 30px;
+
+  height:           60px;
+  font-family:      Poppins, arial;
+  font-size:        2rem;
+  text-decoration:  none;
+  text-align:       center;
+  transition:       all .5s ease;
+  display:          block;
+  width:            95%;
+  padding:          0.5rem;
+  border-radius:    1.0rem;
+  background-color:#5F9DF7;
+  color:          #000;
+  transition:       all .5s ease 0s;
+
+}
+
+.btnLogin span{
+  display:    inline-block;
+  color:    white;
+  position:   relative;
+  transition: all .5s ease;
+}
+
+.RightToIcon{
+  color:      white;
+  position:     absolute;
+  top:          15px;
+  left:         9rem;
+  display:      inline-block;
+  opacity:      0;
+  transition:   all .2s ease 0s;
+}
+
+.btnLogin:hover span{
+  padding-left: 3.5rem; 
+}
+
+.btnLogin:hover .RightToIcon{
+  left:     7rem;
+  opacity:  1;
+}
+
+.btnCad{
+
+	text-decoration: 	none;
+	font-family: 		BarlowSemiCondensed, arial;
+	font-size: 			18px;
+	position: 			relative;
+	top: 				    40px;
+	color:				rgb(36, 36, 36);
+
+}
+
+.btnCad:hover{
+
+	text-decoration: underline;
+
+}

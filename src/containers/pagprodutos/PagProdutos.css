@@ -1,0 +1,345 @@
+
+.pagProdPage{
+
+	width: 				    100%;
+	min-height: 		  100vh;
+	display: 			    flex;
+	align-items: 		  center;
+	justify-content: 	center;
+	flex-direction: 	column;
+  background-color: whitesmoke;
+
+}
+
+.quadradao{
+
+  border-radius:    4px;
+  
+  background-color: white;
+	display: 			    flex;
+	flex-direction: 	row;
+	flex-wrap: 			  wrap;
+  align-items:      center;
+	justify-content: 	space-around;
+	color: 				  black;
+	width: 				    95%;
+	max-width: 			  800px;
+	min-height: 		  400px;
+	height: 			    100%;
+	margin-top: 		  150px;
+	text-align: 		  center;
+}
+
+.nomeprd{
+
+	font-family: 	BarlowSemiCondensedBold, arial;
+	font-size: 		30px;
+	letter-spacing: 1px;
+	word-wrap: 		break-word;
+
+}
+.nomeprd-container {
+
+	width: 		100%;
+	height: 	100px;
+
+}
+
+.txtdesc{
+	font-size: 		16px;
+	letter-spacing: 1px;
+	word-wrap: 		break-word;
+}
+.txtdesc-container {
+	height: 		100px;
+	width: 			100%;
+}
+
+.valor{
+
+	font-family: 	BarlowSemiCondensedBold, arial;
+	font-size: 		24px;
+	letter-spacing: 1px;
+
+}
+
+.valor-container {
+	width: 		100%;
+	height: 	50px;
+}
+
+
+.disponivel {
+	font-family: 	  BarlowSemiCondensed, arial;
+	font-size: 		  24px;
+	letter-spacing: 1px;
+}
+
+.disponivel-container {
+	width: 		100%;
+	height: 	70px;
+}
+
+
+.indisponivel {
+
+	font-size: 			  16px;
+	text-decoration:  none;
+	color: 				  rgb(70, 70, 70);
+
+}
+
+.indisponivel:hover {
+	text-decoration: 	underline;
+}
+
+
+.imgProduto {
+
+	width: 	350px;
+	height: 350px;
+  border-radius: 4px;
+
+}
+.img-container {
+
+	width: 350px;
+
+}
+
+.btnAdcCarrinho{
+
+  cursor:       pointer;
+  user-select:  none;
+  color:      white;
+
+  position:   relative;
+
+  font-family:      BarlowSemiCondensedBold, arial;
+  font-size:        15px;
+  text-decoration:  none;
+  text-align:       center;
+  transition:       all .5s ease;
+  width:            220px;
+  height:           100%;
+  padding:          0.5rem;
+  border-radius:    4px;
+  background-color:#5F9DF7;
+  transition:       all .5s ease 0s;
+
+}
+
+.btnAdcCarrinho span{
+  display:    inline-block;
+  color:    white;
+  position:   relative;
+  top:        2px;
+  transition: all .5s ease;
+}
+
+.cartShoppingIconAdc{
+  color:      white;
+  position:     absolute;
+  top:          12px;
+  left:         20px;
+  display:      inline-block;
+  opacity:      0;
+  transition:   all .2s ease 0s;
+}
+
+.btnAdcCarrinho:hover span{
+  padding-left: 30px; 
+}
+
+.btnAdcCarrinho:hover .cartShoppingIconAdc{
+  left:     8px;
+  opacity:  1;
+}
+
+
+.btnAdcCarrinho:active{
+  
+  transform: scale(0.90);
+}
+
+.aumentaDiminui{
+
+	cursor: 			pointer;
+	height: 			20px;
+	width: 				20px;
+	font-weight: 	bold;
+	color: 				black;
+	border: 			none;
+
+	transition: 		transform .2s;
+
+}
+
+.aumentaDiminui:active{
+	transform: scale(0.9);
+}
+
+.au-di-container {
+	
+  user-select: 		  none;
+  color:          black;
+	text-align: 		  center;
+	display: 			    flex;
+	background-color: whitesmoke;
+	border-radius: 		2px;	
+	width: 				    80px;
+	height: 			    99%;
+	justify-content: 	space-around;
+	align-items: 		center;
+	flex-direction: 	row;
+}
+
+.qtd-text {
+	width: 20px;
+}
+
+.adc-carrinho-container {
+	
+	width: 				    310px;
+	height: 			    38px;
+	display: 			    flex;
+	justify-content:  space-between;
+	align-items: 		  center;
+	flex-direction: 	row;
+}
+
+
+.abaComentarios{
+
+	display: 			    flex;
+	align-items: 		  center;
+	justify-content: 	center;
+	flex-direction: 	column;
+	width: 				    95%;
+	max-width: 			  800px;
+	margin-top: 		  180px;
+
+}
+
+.abaComentarios h1 {
+  font-family: BarlowSemiCondensedBold, arial;
+}
+
+.container-comentario-ib {
+
+	display:          flex;
+	justify-content:  space-between;
+	align-items: 	    center;
+  width:            100%;
+  margin-top:       20px;
+  margin-bottom:    10px;
+}
+
+.input-comentario{
+  font-family:    BarlowSemiCondensed, arial;
+
+  background-color: 	whitesmoke;
+  flex:               0.96;
+	resize: 		        none;
+	font-size: 	        22px;
+	height: 		        100%;
+  border-top:         0px;
+  border-left:        0px;
+  border-right:       0px;
+  border-bottom:      2px solid;
+  border-color:       hsl(217, 16%, 45%);
+
+}
+
+
+.btn-comentar{
+
+  cursor:       pointer;
+  user-select:  none;
+  color:      white;
+
+  position:   relative;
+
+  font-family:      BarlowSemiCondensedBold, arial;
+  font-size:        15px;
+  text-decoration:  none;
+  text-align:       center;
+  transition:       all .5s ease;
+  width:            130px;
+  height:           100%;
+  padding:          0.5rem;
+  border-radius:    4px;
+  background-color:#5F9DF7;
+  transition:       all .5s ease 0s;
+
+}
+
+.btn-comentar span{
+  display:    inline-block;
+  color:    white;
+  position:   relative;
+  top:        0px;
+  transition: all .5s ease;
+}
+
+.commentIconAdc{
+  color:      white;
+  position:     absolute;
+  top:          10px;
+  left:         30px;
+  display:      inline-block;
+  opacity:      0;
+  transition:   all .2s ease 0s;
+}
+
+.btn-comentar:hover span{
+  padding-left: 25px; 
+}
+
+.btn-comentar:hover .commentIconAdc{
+  left:     20px;
+  opacity:  1;
+}
+
+
+.btn-comentar:active{
+	transform: scale(0.9);
+}
+
+.info-container {
+	font-family: 		BarlowSemiCondensed, arial;
+	letter-spacing: 1px;
+	display: 			  flex;
+	text-align: 	  left;
+	align-items: 	  flex-start;
+	flex-direction: column;
+	width: 		  350px;
+  min-width:  300px;
+  margin-left: 10px;
+  height:     350px;
+}
+
+
+@media only screen and (max-width: 747px) {
+
+	.quadradao {
+		justify-content: center;
+	}
+	.info-container {
+		align-items: 	center;
+		text-align: 	center;
+	}
+  .imgProduto {
+    margin-top: 20px;
+  }
+  .adc-carrinho-container {
+    margin-bottom: 15px;
+  }
+  .indisponivel {
+    margin-bottom: 15px;
+  }
+  .nomeprd-container {
+    margin-top: 10px;
+  }
+   
+}
