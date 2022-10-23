@@ -270,7 +270,7 @@ export default FinalCompra;
 const MiniCarrinhoItem = ({id, nome_produto, valor_unitario, quantidade}) => {
 
   try {
-		var imagemArquivo = require('../../../../apiClardv6/app/public/upload/productsImg/produto_'+ id.toString().trim() +'.png');
+		var imagemArquivo = require('../../../../apiclard/app/public/upload/productsImg/produto_'+ id.toString().trim() +'.png');
 	} catch {
 		var imagemArquivo = require('../../images/indisponivel.jpg');
 	}

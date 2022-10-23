@@ -60,7 +60,7 @@ function PagProdutos() {
   	//-------------------------------------------------
 	
 	try {
-		var imagemArquivo = require('../../../../apiClardv6/app/public/upload/productsImg/produto_'+ produtoId.toString().trim() +'.png');
+		var imagemArquivo = require('../../../../apiclard/app/public/upload/productsImg/produto_'+ produtoId.toString().trim() +'.png');
 	} catch {
 		var imagemArquivo = require('../../images/indisponivel.jpg');
 	}

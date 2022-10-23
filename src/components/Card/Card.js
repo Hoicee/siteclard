@@ -5,7 +5,7 @@ import './Card.css';
 const Card = ({ nome_produto, valor, id}) => {
 	
 	try {
-		var imagemArquivo = require('../../../../apiClardv6/app/public/upload/productsImg/produto_'+ id.toString().trim() +'.png');
+		var imagemArquivo = require('../../../../apiclard/app/public/upload/productsImg/produto_'+ id.toString().trim() +'.png');
 	} catch {
 		var imagemArquivo = require('../../images/indisponivel.jpg');
 	}

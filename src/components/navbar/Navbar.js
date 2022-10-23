@@ -366,7 +366,7 @@ const ListaCarrinho = (props) => {
 const ItemCarrinho = (props) => {
 
   try {
-		var imagemArquivo = require('../../../../apiClardv6/app/public/upload/productsImg/produto_'+ props.id_produto.toString().trim() +'.png');
+		var imagemArquivo = require('../../../../apiclard/app/public/upload/productsImg/produto_'+ props.id_produto.toString().trim() +'.png');
 	}catch {
 		var imagemArquivo = require('../../images/indisponivel.jpg');
 	}
