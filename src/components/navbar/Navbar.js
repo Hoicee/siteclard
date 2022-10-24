@@ -365,9 +365,10 @@ const ListaCarrinho = (props) => {
 
 const ItemCarrinho = (props) => {
 
-  try {
-		var imagemArquivo = require('../../../../apiclard/app/public/upload/productsImg/produto_'+ props.id_produto.toString().trim() +'.png');
-	}catch {
+  if (`http://${config.api_ip}:9001/productsImg/produto_`+ props.id_produto.toString().trim() +'.png'){
+		var imagemArquivo = `http://${config.api_ip}:9001/productsImg/produto_`+ props.id_produto.toString().trim() +'.png'
+	}
+	else {
 		var imagemArquivo = require('../../images/indisponivel.jpg');
 	}
 

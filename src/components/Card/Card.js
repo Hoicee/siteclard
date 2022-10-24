@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
+var config = require('../../config/servidor.config')
 
 const Card = ({ nome_produto, valor, id}) => {
 	
-	try {
-		var imagemArquivo = require('../../../../apiclard/app/public/upload/productsImg/produto_'+ id.toString().trim() +'.png');
-	} catch {
+	if (`http://${config.api_ip}:9001/productsImg/produto_`+ id.toString().trim() +'.png'){
+		var imagemArquivo = `http://${config.api_ip}:9001/productsImg/produto_`+ id.toString().trim() +'.png'
+	}
+	else {
 		var imagemArquivo = require('../../images/indisponivel.jpg');
 	}
 

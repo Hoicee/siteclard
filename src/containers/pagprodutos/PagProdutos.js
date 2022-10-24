@@ -59,9 +59,10 @@ function PagProdutos() {
     };
   	//-------------------------------------------------
 	
-	try {
-		var imagemArquivo = require('../../../../apiclard/app/public/upload/productsImg/produto_'+ produtoId.toString().trim() +'.png');
-	} catch {
+	if (`http://${config.api_ip}:9001/productsImg/produto_`+ produtoId.toString().trim() +'.png'){
+		var imagemArquivo = `http://${config.api_ip}:9001/productsImg/produto_`+ produtoId.toString().trim() +'.png'
+	}
+	else {
 		var imagemArquivo = require('../../images/indisponivel.jpg');
 	}
 
