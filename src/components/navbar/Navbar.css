@@ -34,7 +34,7 @@
 .navlogo
 {
 	height: 	80px;
-  margin:   20px;
+  padding-left: 10px;
   user-select: none;
 }
 
@@ -62,6 +62,7 @@
   background-color: #edf2f7;
   height:           30px;
   border-radius:    20px;
+  margin-left:      10px;
   display:          flex;
   align-items:      center;
   justify-content:  space-around;
@@ -184,7 +185,7 @@
   display:      flex;
   width:        auto;
   align-items:  center;
-  width:        433px;
+  width: 412px;
   font-family: BarlowSemiCondensed, arial;
 }
 
@@ -201,6 +202,7 @@
   transition: color 300ms ease-out;
 
   display:          flex;
+  padding-left:     0;
   justify-content:  center;
 }
 
@@ -490,8 +492,10 @@
 
 
 }
-@media only screen and (max-width: 420px) {
-
+@media (max-width: 870px) {
+  .categorias {
+    padding-left: 10px;
+  }
 }
 
 
