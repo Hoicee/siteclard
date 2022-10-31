@@ -8,7 +8,7 @@ function UserCompras(){
 
 	return(
 
-		<div>
+		<div className=''>
 
 		{localStorage.getItem('chave') ? 
 

@@ -1,16 +1,14 @@
-.lista-compras{
-
-	width: 				100%;
-	display: 			flex;
-	align-items: 		center;
-	justify-content: 	center;
+.lista-compras {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(56 146 255 / 0.1);
 }
 
-.itens-compra{
-
-	width: 		650px;
-	height: 	650px;
-	margin-top: 120px;
-	overflow-y: auto;
-	
+.itens-compra {
+  width: 650px;
+  height: 650px;
+  overflow-y: auto;
 }

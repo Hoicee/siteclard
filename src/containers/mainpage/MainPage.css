@@ -1,11 +1,10 @@
 .main-page-content {
-  width:          100%;
-  display:        flex;
-  align-items:    center;
+  width: 100%;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  padding-top:    90px;
-  overflow:       hidden;
-
+  padding-top: 90px;
+  overflow: hidden;
 }
 
 .mini-logo {
@@ -13,85 +12,84 @@
 }
 
 .introducao-mainpage {
-  display:      flex;
-  justify-content:  center;
-  align-items:  center;
-  width:        100%;
-  background: rgb(185,237,255);
-  min-height:   500px;
-  background:   linear-gradient(90deg, rgba(35,199,255,1) 0%, rgba(24,63,150,1) 33%, rgba(25,40,74,1) 100%);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 400px;
+  background: linear-gradient(
+    90deg,
+    rgba(54, 93, 180, 1) 33%,
+    rgba(25, 40, 74, 1) 100%
+  );
 }
 
 .container-itens-introducao-mainpage {
-  margin-top:       20px;
-  display:          flex;
-  justify-content:  center;
-  align-items:      center;
-  flex-wrap:        wrap;
-  max-width:        1000px;
-  width:            95%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 95%;
 }
 
 .textos-introducao {
-
-  font-family:    BarlowSemiCondensed, arial;
-  flex:           1;
-  display:        flex;
+  font-family: BarlowSemiCondensed, arial;
+  flex: 1;
+  display: flex;
   flex-direction: column;
-  min-width:      370px;
+  min-width: 370px;
   padding-bottom: 20px;
-  color:        white;
+  color: white;
 }
 
-.textos-introducao h1{
-  display:        flex;
-  margin-bottom:  20px;
+.textos-introducao h1 {
+  display: flex;
+  margin-bottom: 20px;
   flex-direction: column;
 }
 
 .categorias-container {
-  font-family:    BarlowSemiCondensed, arial;
-  margin-top:     80px;
-  display:        flex;
+  font-family: BarlowSemiCondensed, arial;
+  margin-top: 80px;
+  display: flex;
   flex-direction: column;
-  align-items:    center;
+  align-items: center;
 }
 
 .categoria {
   display: flex;
-  flex-direction:     column;
-  align-items:        center;
-  justify-content:    center;
-  width:              160px;
-  height:             160px;
-  border-radius:      8px;
-  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
 }
 
 .categorias-block {
   display: grid;
   grid-template-columns: repeat(6, auto);
-  margin-top:     20px;
-  grid-gap:       15px;
+  margin-top: 20px;
+  grid-gap: 15px;
 }
 
 .categorias-block img {
   height: 80px;
-  width:  80px;
+  width: 80px;
 }
 
 .img-categoria-container {
-  background-color:     #5F9DF7;
-  padding:              20px;
-  border-radius:        50%;
-
+  background-color: #5f9df7;
+  padding: 20px;
+  border-radius: 50%;
 }
 
 .categoria {
-  text-decoration:  none;
-  padding:          90px;
-  color:          black;
+  text-decoration: none;
+  padding: 90px;
+  color: black;
 }
 
 .novidades-container {
@@ -115,9 +113,9 @@ button.rec-dot {
 
 .rec.rec-arrow {
   background-color: #dbdbdb;
-  border:           none;
-  box-shadow:       none;
-  color:            black;
+  border: none;
+  box-shadow: none;
+  color: black;
 }
 
 .rec.rec-arrow {
@@ -129,27 +127,34 @@ button.rec-dot {
   padding: 20px;
 }
 
+.footer-main {
+  display: flex;
+  justify-content: center;
+  font-family: Montserrat, serif;
+  font-size: 18px;
+  background-color: rgb(56 146 255 / 0.15);
+  padding: 15px;
+  width: 100%;
+}
+
 /* carousel */
 
-@media (max-width: 1160px){
-
+@media (max-width: 1160px) {
   .categorias-block {
     grid-template-columns: repeat(3, auto);
   }
 }
 
-@media (max-width: 742px){
+@media (max-width: 742px) {
   .textos-introducao {
     text-align: center;
   }
-  .introducao-mainpage{
-    background: rgba(24,63,150,1);
+  .introducao-mainpage {
+    background: rgba(24, 63, 150, 1);
   }
-  
 }
 
-@media (max-width: 590px){
-
+@media (max-width: 590px) {
   .categorias-block {
     grid-template-columns: repeat(2, auto);
   }
