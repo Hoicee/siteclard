@@ -459,6 +459,12 @@
 
 }
 
+@media (max-width: 870px) {
+  .categorias {
+    padding-left: 10px;
+  }
+}
+
 @media only screen and (max-width: 760px) {
 
 	.bars {
@@ -489,13 +495,10 @@
   .conta-login {
     margin-top: 80px;
   }
-
-
-}
-@media (max-width: 870px) {
-  .categorias {
-    padding-left: 10px;
+  .navoption {
+    padding: 0;
   }
+
 }
 
 
@@ -659,6 +662,7 @@
   margin-top:       10px;
   display:          flex;
   flex-direction:   column;
+  overflow-x:       hidden;
   overflow-y:       auto;
 
 }

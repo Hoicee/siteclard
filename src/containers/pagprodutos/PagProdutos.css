@@ -283,7 +283,7 @@
   height: 350px;
 }
 
-@media only screen and (max-width: 747px) {
+@media only screen and (max-width: 757px) {
   .quadradao {
     justify-content: center;
   }
