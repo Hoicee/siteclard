@@ -340,12 +340,8 @@ export default FinalCompra;
 
 const MiniCarrinhoItem = ({id, nome_produto, valor_unitario, quantidade}) => {
 
-  if (`http://${config.api_ip}:9001/productsImg/produto_`+ id.toString().trim() +'.png'){
-		var imagemArquivo = `http://${config.api_ip}:9001/productsImg/produto_`+ id.toString().trim() +'.png'
-	}
-	else {
-		var imagemArquivo = require('../../images/indisponivel.jpg');
-	}
+	var linkimg = `http://${config.api_ip}:9001/productsImg/produto_`+ id.toString().trim() +'.png';
+	var imagemArquivo = (linkimg) ? linkimg : require('../../images/indisponivel.jpg');
 
   return (
 

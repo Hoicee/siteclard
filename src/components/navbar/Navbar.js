@@ -372,12 +372,8 @@ const ListaCarrinho = (props) => {
 
 const ItemCarrinho = (props) => {
 
-  if (`http://${config.api_ip}:9001/productsImg/produto_`+ props.id_produto.toString().trim() +'.png'){
-		var imagemArquivo = `http://${config.api_ip}:9001/productsImg/produto_`+ props.id_produto.toString().trim() +'.png'
-	}
-	else {
-		var imagemArquivo = require('../../images/indisponivel.jpg');
-	}
+	var linkimg = `http://${config.api_ip}:9001/productsImg/produto_`+ props.id_produto.toString().trim() +'.png';
+	var imagemArquivo = (linkimg) ? linkimg : require('../../images/indisponivel.jpg');
 
   const remover = () => {
 

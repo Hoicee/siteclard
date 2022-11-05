@@ -12,6 +12,7 @@
 }
 
 .introducao-mainpage {
+  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +52,7 @@
 }
 
 .categorias-container {
+  user-select: none;
   font-family: BarlowSemiCondensed, arial;
   margin-top: 80px;
   display: flex;
@@ -93,6 +95,7 @@
 }
 
 .novidades-container {
+  user-select: none;
   font-family: BarlowSemiCondensed, arial;
   margin-top: 80px;
 }
@@ -128,6 +131,7 @@ button.rec-dot {
 }
 
 .footer-main {
+  user-select: none;
   display: flex;
   justify-content: center;
   font-family: Montserrat, serif;
@@ -150,7 +154,7 @@ button.rec-dot {
     text-align: center;
   }
   .introducao-mainpage {
-    background: rgba(24, 63, 150, 1);
+    background: rgba(54, 93, 180, 1) 33%;
   }
 }
 
