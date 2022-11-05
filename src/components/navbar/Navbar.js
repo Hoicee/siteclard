@@ -248,8 +248,15 @@ const Carrinho = (props) => {
   const [totalAPagar, setTotalAPagar] = useState(0);
   var valor_total = 0;
 
-  return (<div className={props.cartOpen ? 'cart-container visible' : 'cart-container'}>
+  function verificarClickFora(e) {
+    if(e.target == document.querySelector('.cart-container')) {
+      props.setCartOpen(false);
+    } 
+  }
+
+  return (<div onClick={e => verificarClickFora(e)} className={props.cartOpen ? 'cart-container visible' : 'cart-container'}>
     
+
     <div className={props.cartOpen ? 'cart-tab visible' : 'cart-tab'}>
 
       <div className="carrinho-medium-container">

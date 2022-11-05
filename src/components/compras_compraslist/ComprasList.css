@@ -1,3 +1,8 @@
 .comprasList{
 	margin-top: 10px;
 }
+
+.nenhuma-compra {
+	text-align: center;
+	font-family: Montserrat, serif;
+}

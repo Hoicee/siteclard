@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faCropSimple } from '@fortawesome/free-solid-svg-icons';
 import './FinalCompra.css';
 import InputMask from 'react-input-mask';
 import AddressCardList  from '../../components/address_addresslist/AddressCardList';
@@ -8,6 +8,9 @@ import toast, {Toaster } from 'react-hot-toast';
 import pix_logo from '../../images/pix-logo.png';
 import paypal_logo from '../../images/paypal-logo.png';
 import logo from '../../images/icon-removebg-preview.png';
+import loading from '../../images/loading.gif';
+import xmark from '../../images/icons/xmark.png';
+import correctmark from '../../images/icons/correct.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 var config = require('../../config/servidor.config');
 
@@ -17,7 +20,14 @@ function FinalCompra(){
 
   const [formEndOpen, setFormEndOpen] = useState(false);
   const [attEnderecos, setAttEnderecos] = useState(false);
+  const [flagCEP, setFlagCEP] = useState(false);
+  const [xmarkFlag, setXmarkFlag] = useState(false);
+  const [correctFlag, setCorrectFlag] = useState(false);
+
+  
+  const [infosEndereco, setInfosEndereco] = useState([]);
 	const [cart, setCart] = useState([]);
+
 	var valorTotal = 0;
 	var idEndereco = 0;
 	var pagamento = "";
@@ -35,7 +45,7 @@ function FinalCompra(){
     valorTotal = valorTotal + produto.quantidade * produto.valor_unitario;
     document.getElementById('h3-valorTotal').innerHTML = "Valor total: R$ " + valorTotal;
 
-  })
+  });
 
 
   })
@@ -63,6 +73,52 @@ function FinalCompra(){
       .catch(error => console.log('error', error));
 	
 	}
+
+  const buscarCep = (e) => {
+
+    if(e.target.value.length === 8 && flagCEP !== true) {
+      if(!xmarkFlag && !correctFlag) setFlagCEP(true);
+      setTimeout(() => {
+        if(e.target.value.length === 8){
+
+          fetch(`https://viacep.com.br/ws/${e.target.value}/json/`)
+          .then(response => response.json())
+          .then(result => setInfosEndereco(result))
+          .catch(error => console.log(error));
+
+        }
+      }, 600)
+
+    }
+    else if(e.target.value.length < 8){
+      setFlagCEP(false);
+      setXmarkFlag(false);
+      setCorrectFlag(false);
+    }
+
+  }
+
+  useEffect(() => {
+    if (infosEndereco.length < 8 || infosEndereco.erro === false) return;
+    if (infosEndereco.erro === true) {
+
+      setFlagCEP(false); 
+      setXmarkFlag(true); 
+      setCorrectFlag(false); 
+      return;
+
+    };
+    if (infosEndereco.cep) {
+
+      setFlagCEP(false); 
+      setCorrectFlag(true); 
+      setXmarkFlag(false);  
+      return;
+
+    };
+
+
+ }, [infosEndereco]);
 
 	const finalizarCompra = () => {
 
@@ -122,11 +178,10 @@ function FinalCompra(){
   const adicionarEndereco = () => {
 
     var nome = document.getElementById('input_nome_end').value;
-    var cep = document.getElementById('input_cep_end').value;
     var num = document.getElementById('input_num_end').value;
 
 
-    if(localStorage.getItem('chave') && nome.length > 0 && cep.length == 8 && num.length > 0){
+    if(localStorage.getItem('chave') && nome.length > 0 && correctFlag && num.length > 0){
 
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
@@ -134,7 +189,7 @@ function FinalCompra(){
       
       var raw = JSON.stringify({
         "nome": nome,
-        "cep": cep,
+        "cep": infosEndereco.cep,
         "num": num
       });
       
@@ -172,9 +227,7 @@ function FinalCompra(){
   }
 
   if(cart.length === 0){
-
     return <div />;
-
   }
 
 	return(
@@ -203,7 +256,25 @@ function FinalCompra(){
               <span>Adicionar Endereço</span>
 
               <InputMask id='input_nome_end' type="text" placeholder='Nome' maxLength='12' maskChar={null}/>
-              <InputMask id='input_cep_end' type="text" placeholder='CEP' mask='99999-99' maskChar={null}/>
+
+              <div className="input-cep-descritivo">
+                
+                <InputMask onChange={e => buscarCep(e)}  id='input_cep_end' type="text" placeholder='CEP' mask='99999999' maskChar={null}/>
+                <img className={ flagCEP ? 'cep-interactions visible' : 'cep-interactions'} src={loading} alt='loading' />
+                <img className={ xmarkFlag ? 'cep-interactions visible' : 'cep-interactions'} src={xmark} alt='xmark' />
+                <img className={ correctFlag ? 'cep-interactions visible' : 'cep-interactions'} src={correctmark} alt='correctmark' />
+              
+              </div>
+      
+              <div className={correctFlag ? 'infos-cep visible' : 'infos-cep'}>
+                
+                <h5>Rua:&nbsp;{infosEndereco.logradouro}</h5>
+                <h5>Bairro: {infosEndereco.bairro}</h5>
+                <h5>Cidade: {infosEndereco.localidade}</h5>
+                <h5 style={{marginBottom: "5px"}}>Estado: {infosEndereco.uf}</h5>
+                
+              </div>
+
               <InputMask id='input_num_end' type="text" placeholder='NUM' mask='99999999' maskChar={null}/>
               <div onClick={adicionarEndereco} className="btn-concluir-add-end">ADICIONAR</div>
 

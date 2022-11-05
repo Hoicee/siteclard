@@ -38,7 +38,7 @@ const ComprasList = () => {
 	}
 
 	if(compras.length == 0){
-		return <h2> Nenhuma compra foi feita </h2>
+		return <h2 className='nenhuma-compra'> NENHUMA COMPRA FOI FEITA </h2>
 	}
 
 	return(
