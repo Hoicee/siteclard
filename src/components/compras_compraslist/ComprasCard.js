@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ComprasCard.css';
 import ItensCompradosList from './ItensCompradosList'
 var config = require('../../config/servidor.config');
@@ -19,23 +19,10 @@ const ComprasCard = ({id, id_endereco, forma_pgto, valor_total, status_entrega})
   	const fetchData = () => {
 
 		if(localStorage.getItem('chave')){
-			var myHeaders = new Headers();
-			myHeaders.append("x-access-token", localStorage.getItem('chave'));
 
-			var requestOptions = {
-			  method: 'GET',
-			  headers: myHeaders,
-			  redirect: 'follow'
-			};
-
-			fetch(`http://${config.api_ip}:9001/api/address/list`, requestOptions)
+			fetch(`http://${config.api_ip}:9001/api/address/get/${id_endereco}`)
 			  .then(response => response.json())
-			  .then(result => {
-			  	console.log(result);
-			  	setEnderecos(result.filter(result => {
-                      return result.id == id_endereco
-                      }));
-			  })
+			  .then(result => { setEnderecos(result)})
 			  .catch(error => console.log('error', error));
 		}
 	}
